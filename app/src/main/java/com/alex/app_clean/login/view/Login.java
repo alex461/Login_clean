@@ -77,8 +77,8 @@ public class Login extends AppCompatActivity implements IntfViewLogin{
 
     @Override
     public void goCreateAccont() {
-       /* Intent intent1 = new Intent(Login.this,Creeate_account.class);
-        startActivity(intent1)*/;
+        Intent intent1 = new Intent(Login.this,Create_account.class);
+        startActivity(intent1);
     }
 
     @Override
