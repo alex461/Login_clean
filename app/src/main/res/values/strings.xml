@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">alex</string>
+    <string name="title_activity_creeate_acoount">Creeate_acoount</string>
+    <string name="email">Mail</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_user">User</string>
+    <string name="hint_password">password</string>
+    <string name="hint_confirm_password">Confirn password</string>
+    <string name="text_button_createaccount">Join up</string>
+    <string name="toolbar_tittle_createaccount">Create account</string>
+    <string name="usuario">User</string>
+    <string name="password">password</string>
+    <string name="text_button_login">enter</string>
+    <string name="dont_have_account">you do not have an account?,</string>
+    <string name="create_here"> create one here</string>
+    <string name="firsword_card">Hace</string>
+    <string name="timecard_card">4 dias</string>
+    <string name="likennumbercard">10 like</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buscar">Search</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="seconWord_detail">i like it</string>
+    <string name="userName">alexander Ramirez</string>
+    <string name="tittleimagedetail">\"Todo happy aqui :D\"</string>
+    <string name="loren">bla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla blabla bla bla</string>
+    <string name="transitionname_picture">transitionnamepicture</string>
+    <string name="login_error">Something happen: </string>
+    <string name="hint_title">Titulo</string>
+    <string name="hint_description">Descripción</string>
+    <string name="text_button_createPost">Crear Post</string>
+
+</resources>
