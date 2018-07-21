@@ -16,15 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.view.Create_account"
-            android:parentActivityName=".login.view.Login"
-            >
+        <activity
+            android:name=".login.view.Create_account"
+            android:parentActivityName=".login.view.Login">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".login.view.Login"
-                />
-
+                android:value=".login.view.Login" />
         </activity>
+        <activity android:name=".activity.ContainerActivity"></activity>
     </application>
 
 </manifest>

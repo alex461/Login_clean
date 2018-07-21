@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alex.app_clean.R;
+import com.alex.app_clean.activity.ContainerActivity;
 import com.alex.app_clean.login.presenter.ImplPresenterLogin;
 import com.alex.app_clean.login.presenter.IntfPresenterLogin;
 
@@ -83,8 +84,8 @@ public class Login extends AppCompatActivity implements IntfViewLogin{
 
     @Override
     public void goHome() {
-        /*Intent intent = new Intent(Login.this,ContainerActivity.class);
-        startActivity(intent);*/
+        Intent intent = new Intent(Login.this,ContainerActivity.class);
+        startActivity(intent);
     }
 
 
