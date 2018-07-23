@@ -1,12 +1,16 @@
-package com.alex.app_clean.fragment;
+package com.alex.app_clean.post.view;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,9 +27,11 @@ import java.util.List;
  */
 public class HomeFragment extends Fragment {
 
+    private static final int REQUEST_CAMERA = 1;
     private RecyclerView rv;
     private List<Picture> pictures;
     private PictureAdapterRecyclerView rvAdapter;
+    private FloatingActionButton fabCamera;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -41,6 +47,7 @@ public class HomeFragment extends Fragment {
         showToolbar("Home ",false,view);
 
         rv =view.findViewById(R.id.pictureRecycler);
+        fabCamera=view.findViewById(R.id.fabCamera);
 
         LinearLayoutManager linearLayoutM = new LinearLayoutManager(getContext());
         linearLayoutM.setOrientation(LinearLayoutManager.VERTICAL);
@@ -51,6 +58,13 @@ public class HomeFragment extends Fragment {
         rvAdapter = new PictureAdapterRecyclerView(todoslosdatos(),R.layout.cardview_item,getActivity());
         rv.setAdapter(rvAdapter);
 
+
+        fabCamera.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                takePicture();
+            }
+        });
 
 
 //        mDataReference.child("datos").addValueEventListener(new ValueEventListener() {
@@ -78,7 +92,22 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
-//    private void FireArranque(){
+    private void takePicture() {
+
+        Intent intentTakePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if(intentTakePicture.resolveActivity(getActivity().getPackageManager())!= null){
+        startActivityForResult(intentTakePicture,REQUEST_CAMERA);
+        }
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == REQUEST_CAMERA && resultCode == getActivity().RESULT_OK){
+            Log.d("HomeFragment","CAMERA OK!! :3");
+        }
+    }
+
+    //    private void FireArranque(){
 //        FirebaseApp.initializeApp(this.getContext());
 //        mDataBase = FirebaseDatabase.getInstance();
 //        mDataReference= mDataBase.getReference("tutorial");

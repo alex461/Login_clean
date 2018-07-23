@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.alex.app_clean.R;
-import com.alex.app_clean.fragment.HomeFragment;
+import com.alex.app_clean.post.view.HomeFragment;
 import com.alex.app_clean.fragment.ProfilerFragment;
 import com.alex.app_clean.fragment.SearchFragment;
 
